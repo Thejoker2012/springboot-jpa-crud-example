@@ -1,16 +1,17 @@
 package br.com.iago.springbootjpacrudexample.controller;
 
+import br.com.iago.springbootjpacrudexample.exception.ResourceNotFoundException;
 import br.com.iago.springbootjpacrudexample.model.Employee;
 import br.com.iago.springbootjpacrudexample.repository.EmployeeRepository;
 import jdk.management.resource.internal.ResourceNatives;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
